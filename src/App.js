@@ -8,15 +8,21 @@ class App extends Component {
     document.addEventListener('onkeypress',this.escPress);
   }
   escPress(event){
-    //debugger
-    // if(event.keyCode==27&& this.state.inputChips.length > 0){
-    //   debugger
-    //   var inputChipsList=this.state.inputChips||[];
-    //   var lasElement=inputChipsList.pop();
-    //   lasElement.setAttribute('style', 'background-color:yellow');
-    //   this.setState({inputChips:inputChipsList});
-    // }
-    this.onInputChange(event);
+    if(event.keyCode==27&& this.state.inputChips.length > 0){
+      debugger
+      var ele = document.getElementById(this.state.inputChips[this.state.inputChips.length-1].props.index);
+      if(!ele.className.includes('warning')){
+        ele.className += ' warning';
+      }
+      else{
+        var inputChipsList=this.state.inputChips;
+        inputChipsList.pop();
+        this.setState({inputChips:inputChipsList});
+      }
+    }
+    else{
+      this.onInputChange(event);
+    }
   }
   constructor(){
     super();
@@ -73,7 +79,7 @@ class App extends Component {
         <div className='flex-row'>
         {this.state.inputChips}
         </div>
-        <input type='text' id="person-input-field" className='input-bar' onChange={this.onInputChange} />
+        <input type='text' id="person-input-field" className='input-bar' onChange={this.onInputChange} onKeyDown={this.escPress} />
         </div>
         {/* <div>
           {this.state.inputChips} */}

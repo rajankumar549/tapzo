@@ -27,15 +27,13 @@
   to { transform: rotate(360deg); }
 }
 .seach-section{
-padding: 50px;
-    /* margin: 50px; */
+    padding: 50px;
     background-color: #f3f3f3;
     width: 60%;
     margin: auto;
 }
 #person-input-field{
   width: 100%;
-    /* margin: auto; */
     height: 30px;
     border: none;
     background-color: #f3f3f3;
@@ -46,7 +44,6 @@ padding: 50px;
     display: flex;
     width: 400px;
     font-size: 10px;
-    /* border: solid 1px; */
     padding: 5px;
     background: #ffffff;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 2px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
@@ -66,6 +63,7 @@ padding: 50px;
 }
 .suggestion-section li{
   display: flex;
+  margin-bottom: 10px;
 }
 .suggestion-details{
   padding: 10px;
@@ -85,7 +83,6 @@ padding: 50px;
   padding: 0 25px;
   height: 35px;
   font-size: 12px;
-  line-height: 25px;
   border-radius: 25px;
   background-color: #d0d0d0;
 }
@@ -99,6 +96,7 @@ padding: 50px;
 }
 
 .closebtn {
+  padding-top: 10px;
   padding-left: 10px;
   color: #888;
   font-weight: bold;
@@ -114,9 +112,6 @@ padding: 50px;
   display: flex;
   border-bottom: solid 2px blue;
   padding: 5px;
-}
-.chip-suggestion-name{
-  min-width: 60px;
 }
 .hide{
   display: none;
